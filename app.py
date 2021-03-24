@@ -152,13 +152,11 @@ budget = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
 def home():
     len_gestion = []
     for gest in gestion:
-        len_gestion.append(int(len(gest)))
+        len_gestion.append(int(len(gest)));
     len_budget = []
-    for ach in budget:
-        len_budget.append(int(len(ach)))
-    print(len_budget)
-    print(len_gestion)
-    return render_template('index.html', titre='workflow', tab=data, len=len(data), gestion=gestion, budget=budget, lenGestion=len_gestion, lenBudget=len_budget)
+    for budg in budget:
+        len_budget.append(int(len(budg)));
+    return render_template('index.html',titre='workflow',tab=data, len=len(data),gestion = gestion,lenGestion = len_gestion,budget = budget,lenBudget = len_budget)
 
 @app.route("/test", methods=['POST','GET'])
 def test():
