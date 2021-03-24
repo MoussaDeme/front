@@ -51,15 +51,15 @@ data = [    ["1", "Bon N°1",156,"25/01/21","done"],
             ["44", "Bon N°44", 317, "18/02/21", "done"],
             ["45", "Bon N°45", 133, "16/02/21", "hourglass_empty"]]
 gestion = [
-            [["Omar Niang","date"],["Moussa Deme","date"]],
+            [["Oumar Niang","date"],["Moussa Deme","date"]],
             [["Moussa Deme","date"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Omar Niang","date"],["Daouda Kane","16/02/21"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Oumar Niang","date"],["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby","16/02/21"]],
-            [["Omar Niang","date"],["Moussa Deme","date"]],
+            [["Oumar Niang","date"],["Moussa Deme","date"]],
             [["Thierno Diakhaby","16/02/21"]],
             [["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]],
-            [["Omar Niang", "16/02/21"]],
+            [["Oumar Niang", "16/02/21"]],
             [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane","16/02/21"]],
@@ -80,8 +80,8 @@ gestion = [
             [["Daouda Kane", "16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
-            [["Omar Niang", "16/02/21"]],
-            [["Omar Niang", "16/02/21"]],
+            [["Oumar Niang", "16/02/21"]],
+            [["Oumar Niang", "16/02/21"]],
             [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
@@ -89,13 +89,13 @@ gestion = [
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
-            [["Omar Niang", "16/02/21"],["Daouda Kane","16/02/21"]],
+            [["Oumar Niang", "16/02/21"],["Daouda Kane","16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
-            [["Omar Niang", "16/02/21"]],
+            [["Oumar Niang", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
-            [["Omar Niang", "16/02/21"]],
+            [["Oumar Niang", "16/02/21"]],
             [["Moussa Deme", "16/02/21"]]
             ]
 budget = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
@@ -106,48 +106,93 @@ budget = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Thierno Diakhaby","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","13/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]],[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Amadou Barry","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Moussa Deme","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Moussa Deme","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","14/03/2021"]]
+             ,[["Moussa Deme","25/09/2021"],["Moussa Deme","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
+             ,[["Oumar Niang","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Amadou Barry","14/03/2021"]]
+             ,[["Thierno Diakhaby","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Oumar Niang","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Thierno Diakhaby","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Thierno Diakhaby","14/03/2021"]]
               ]
-#for i in range(1,45):
-#    gestion.append([[gestion[0][0][0]+str(i),gestion[0][0][1]+str(i)],[gestion[0][1][0]+str(i),gestion[0][1][1]+str(i)]])
-#print(gestion)
+achat = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Daouda Kane","16/02/21"]]
+             ,[["Oumar Niang","25/09/2021"],["Daouda Kane","12/03/2021"]]
+             ,[["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]]
+             ,[["Thierno Diakhaby","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Daouda Kane","16/02/21"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]],[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Daouda Kane","16/02/21"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Amadou Barry","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Moussa Deme","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Moussa Deme","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Moussa Deme","14/03/2021"]]
+             ,[["Moussa Deme","25/09/2021"],["Moussa Deme","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Daouda Kane","16/02/21"]]
+             ,[["Daouda Kane","16/02/21"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Oumar Niang","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Amadou Barry","14/03/2021"]]
+             ,[["Thierno Diakhaby","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Oumar Niang","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Thierno Diakhaby","14/03/2021"]]
+             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[["Moussa Deme","13/03/2021"]]
+             ,[["Daouda Kane","16/02/21"]]
+              ]
+
 @app.route('/')
 def home():
     len_gestion = []
@@ -180,11 +225,34 @@ def graphique():
                 Tab_gestion[0] += 1
             elif g[0] == "Moussa Deme":
                 Tab_gestion[1] += 1
-            elif g[0] == "Omar Niang":
+            elif g[0] == "Oumar Niang":
                 Tab_gestion[2] += 1
             elif g[0] == "Daouda Kane":
                 Tab_gestion[3] += 1
-
+    Tab_budget = [0] * 4
+    for budg in budget:
+        for b in budg:
+            if b[0] == "Thierno Diakhaby":
+                Tab_budget[0] += 1
+            elif b[0] == "Moussa Deme":
+                Tab_budget[1] += 1
+            elif b[0] == "Oumar Niang":
+                Tab_budget[2] += 1
+            elif b[0] == "Amadou Barry":
+                Tab_budget[3] += 1
+    Tab_achat = [0] * 5
+    for ach in achat:
+        for a in ach:
+            if a[0] == "Thierno Diakhaby":
+                Tab_achat[0] += 1
+            elif a[0] == "Moussa Deme":
+                Tab_achat[1] += 1
+            elif a[0] == "Oumar Niang":
+                Tab_achat[2] += 1
+            elif a[0] == "Amadou Barry":
+                Tab_achat[3] += 1
+            elif a[0] == "Daouda Kane":
+                Tab_achat[4] += 1
     Tab_done = [0]*12
     Tab_clear = [0]*12
     Tab_empty = [0]*12
@@ -195,9 +263,6 @@ def graphique():
             Tab_clear[int(donnee[3][3:5])-1] += int(donnee[2])
         elif donnee[4] == "hourglass_empty":
             Tab_empty[int(donnee[3][3:5])-1] += int(donnee[2])
-    print(Tab_done)
-    print(Tab_empty)
-    print(Tab_clear)
-    return render_template("index2.html",nbr_moi = moi,Tab_gestion = Tab_gestion,Tab_done = Tab_done,Tab_clear = Tab_clear,Tab_empty = Tab_empty)
+    return render_template("index2.html",nbr_moi = moi,Tab_gestion = Tab_gestion,Tab_budget = Tab_budget,Tab_achat = Tab_achat,Tab_done = Tab_done,Tab_clear = Tab_clear,Tab_empty = Tab_empty)
 if __name__ == "__main__":
     app.run(host='127.0.0.2', port=8005, debug=True)
