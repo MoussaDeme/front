@@ -28,32 +28,32 @@
 </head>
 <body>
 
-<div class="row pt-5">
+<div class="row pt-5 ml-5 mr-5">
     <div class="col-sm-6">
             <div class="border border-primary">
-        <canvas id="monGraph" width="400" height="100"></canvas>
+        <canvas id="monGraph" width="400" height="150"></canvas>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
         <script>
+            var donnees = []
+            {% for moi in nbr_moi: %}
+                donnees.push({{moi}})
+            {% endfor %}
             let ctx = document.querySelector("#monGraph")
             let graph = new Chart(ctx, {
                 type: "pie",
                 data: {
-                    labels: ['Rouge', 'Bleu', 'Jaune', 'Vert', 'Violet', 'Orange'],
+                    labels: ['janvier','février','mars','avril','mai','juin','juillet','août, aout','septembre','octobre','novembre','décembre'],
                     datasets: [{
                         label: 'Nombre de votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange']
+                        data: donnees,
+                        backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange','pink', 'white', 'grey', 'brown', 'silver', 'black']
                     }]
-                    // {
-                    //     label: 'Nombre de "J\'aime"',
-                    //     data: [14, 2, 5, 8, 7, 22],
-                    //     backgroundColor: ['red', 'lightblue', 'lightyellow', 'lightgreen', 'pink', 'gold']
-                    // }]
+
                 },
                 options: {
                     title: {
                         display: true,
-                        text: 'Mon joli graphique'
+                        text: 'Nombre de bon de commande par mois'
                     },
                     legend: {
                         position: 'bottom'
@@ -72,31 +72,225 @@
     </div>
     <div class="col-sm-6">
         <div class="border border-primary">
-        <canvas id="monGraph2" width="400" height="100"></canvas>
+        <canvas id="monGraph2" width="400" height="150"></canvas>
         <script>
+            var donnees2 = []
+            {% for gest in Tab_gestion: %}
+                donnees2.push({{ gest }})
+            {% endfor %}
             var ctx2 = document.getElementById('monGraph2');
             var myChart2 = new Chart(ctx2, {
                 type: 'bar',
                 data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['Thierno Diakhaby','Moussa Deme','Oumar Niang','Daouda Kane'],
                     datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: 'Nombre de Validation durant Gestion',
+                        data: donnees2,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
                             'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(50, 152, 10 , 0.2)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
                             'rgba(54, 162, 235, 1)',
                             'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                            'rgba(50, 152, 10 , 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+            </div>
+    </div>
+</div>
+<div class="row pt-5 ml-5 mr-5">
+    <div class="col-sm-6">
+            <div class="border border-primary">
+        <canvas id="monGraph3" width="400" height="150"></canvas>
+        <script>
+
+            var donnees_done = []
+            {% for prix in Tab_done: %}
+                donnees_done.push({{ prix }})
+            {% endfor %}
+            var donnees_clear = []
+            {% for prix1 in Tab_clear: %}
+                donnees_clear.push({{ prix1 }})
+            {% endfor %}
+            var donnees_empty = []
+            {% for prix2 in Tab_empty: %}
+                donnees_empty.push({{ prix2 }})
+            {% endfor %}
+            let ctx3 = document.querySelector("#monGraph3")
+            let graph3 = new Chart(ctx3, {
+                type: "bar",
+                data: {
+                      labels: ['janvier','février','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','décembre'],
+                      datasets: [
+                        {
+                          label: "Valider",
+                          backgroundColor: "green",
+                          data: donnees_done
+                        },
+                        {
+                          label: "En traitement",
+                          backgroundColor: "yellow",
+                          data: donnees_empty
+                        },{
+                          label: "Annuler",
+                          backgroundColor: "red",
+                          data: donnees_clear
+                        }
+                      ]
+                    },
+                    options: {
+                      title: {
+                        display: true,
+                        text: 'Evolution des bon d\'achat'
+                      }
+                    }
+                });
+
+        </script>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="border border-primary">
+        <canvas id="monGraph4" width="400" height="150"></canvas>
+        <script>
+            var donnees_done = []
+            {% for prix in Tab_done: %}
+                donnees_done.push({{ prix }})
+            {% endfor %}
+            var donnees_clear = []
+            {% for prix1 in Tab_clear: %}
+                donnees_clear.push({{ prix1 }})
+            {% endfor %}
+            var donnees_empty = []
+            {% for prix2 in Tab_empty: %}
+                donnees_empty.push({{ prix2 }})
+            {% endfor %}
+            var ctx4 = document.getElementById('monGraph4');
+            var myChart4 = new Chart(ctx4, {
+                type: 'line',
+                data: {
+                        labels: ['janvier','février','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','décembre'],
+                        datasets: [{
+                            data: donnees_done,
+                            label: "Valider",
+                            borderColor: "rgba(50, 152, 10 , 0.8)",
+                            fill: false
+                          }, {
+                            data: donnees_clear,
+                            label: "Annuler",
+                            borderColor: "rgba(255, 99, 132, 1)",
+                            fill: false
+                          }, {
+                            data: donnees_empty,
+                            label: "En traitement",
+                            borderColor: "rgba(255, 206, 86, 1)",
+                            fill: false
+                          }
+                        ]
+                      },
+                      options: {
+                        title: {
+                          display: true,
+                          text: 'Evolution des bon d\'achat'
+                        }
+                      }
+                    });
+        </script>
+            </div>
+    </div>
+</div>
+<div class="row pt-5 ml-5 mr-5">
+    <div class="col-sm-6">
+            <div class="border border-primary">
+        <canvas id="monGraph5" width="400" height="150"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+        <script>
+            var donnees5 = []
+            {% for budg in Tab_budget: %}
+                donnees5.push({{ budg }})
+            {% endfor %}
+            var ctx5 = document.getElementById('monGraph5');
+            var myChart5 = new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Thierno Diakhaby','Moussa Deme','Oumar Niang','Amadou Barry'],
+                    datasets: [{
+                        label: 'Nombre de Validation durant phase Budget',
+                        data: donnees5,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(50, 152, 10 , 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(50, 152, 10 , 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="border border-primary">
+        <canvas id="monGraph6" width="400" height="150"></canvas>
+        <script>
+            var donnees6 = []
+            {% for ach in Tab_achat: %}
+                donnees2.push({{ ach }})
+            {% endfor %}
+            var ctx6 = document.getElementById('monGraph6');
+            var myChart6 = new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: ['Thierno Diakhaby','Moussa Deme','Oumar Niang','Amadou Barry','Daouda Kane'],
+                    datasets: [{
+                        label: 'Nombre de Validation durant Gestion',
+                        data: donnees2,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(50, 152, 10 , 0.2)',
+                            'rgba(15, 120, 120, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(50, 152, 10 , 1)',
+                            'rgba(15, 120, 120, 1)'
                         ],
                         borderWidth: 1
                     }]
@@ -116,87 +310,6 @@
     </div>
 </div>
 <div class="pt-5"/>
-<div class="row">
-    <div class="col-sm-6">
-            <div class="border border-primary">
-        <canvas id="monGraph3" width="400" height="100"></canvas>
-        <script>
-            let ctx3 = document.querySelector("#monGraph3")
-            let graph3 = new Chart(ctx3, {
-                type: "bar",
-                data: {
-                      labels: ["1900", "1950", "1999", "2050"],
-                      datasets: [
-                        {
-                          label: "Africa",
-                          backgroundColor: "#3e95cd",
-                          data: [133,221,783,2478]
-                        }, {
-                          label: "Europe",
-                          backgroundColor: "#8e5ea2",
-                          data: [408,547,675,734]
-                        }
-                      ]
-                    },
-                    options: {
-                      title: {
-                        display: true,
-                        text: 'Population growth (millions)'
-                      }
-                    }
-                });
-        </script>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="border border-primary">
-        <canvas id="monGraph4" width="400" height="100"></canvas>
-        <script>
-            var ctx4 = document.getElementById('monGraph4');
-            var myChart4 = new Chart(ctx4, {
-                type: 'line',
-                data: {
-                        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-                        datasets: [{
-                            data: [86,114,106,106,107,111,133,221,783,2478],
-                            label: "Africa",
-                            borderColor: "#3e95cd",
-                            fill: false
-                          }, {
-                            data: [282,350,411,502,635,809,947,1402,3700,5267],
-                            label: "Asia",
-                            borderColor: "#8e5ea2",
-                            fill: false
-                          }, {
-                            data: [168,170,178,190,203,276,408,547,675,734],
-                            label: "Europe",
-                            borderColor: "#3cba9f",
-                            fill: false
-                          }, {
-                            data: [40,20,10,16,24,38,74,167,508,784],
-                            label: "Latin America",
-                            borderColor: "#e8c3b9",
-                            fill: false
-                          }, {
-                            data: [6,3,2,2,7,26,82,172,312,433],
-                            label: "North America",
-                            borderColor: "#c45850",
-                            fill: false
-                          }
-                        ]
-                      },
-                      options: {
-                        title: {
-                          display: true,
-                          text: 'World population per region (in millions)'
-                        }
-                      }
-                    });
-        </script>
-            </div>
-    </div>
-</div>
-
 </body>
 <style>
     .foot
