@@ -58,10 +58,15 @@
                         <td colspan="5">
 
                             <section class="our-blog p-0 m-0 bg-silver collapse hide"  id="exampleCollapse{{i}}">
+                            <div id="accordion">
     <div class="container work-process  pb-5 pt-5">
-
+                        <div class="row">
+                <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse1_{{ i }}">Gestion</button></div>
+                <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse2_{{ i }}">Budget</button></div>
+                <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse3">Achat</button></div>
+           </div>
         <!-- ============ step 1 =========== -->
-    <div>
+    <div id="collapse1_{{ i }}" class="collapse hide"  data-parent="#accordion">
         <div class="pb-5"><h2>Gestion</h2></div>
         {% for b in range(0,lenGestion[i]) %}
             {% if b%2==0 %}
@@ -122,7 +127,7 @@
         </div>
 
       <!-- ============ step 1 =========== -->
-    <div>
+    <div id="collapse2_{{ i }}" class="collapse hide"  data-parent="#accordion">
         <div class="pb-5"><h2>Budget</h2></div>
         {% for b in range(0,lenBudget[i]) %}
             {% if b%2==0 %}
@@ -185,6 +190,7 @@
 
 
     </div>
+   </div>
 </section>
     <script>AOS.init();</script>
                         </td>
