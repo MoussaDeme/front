@@ -146,15 +146,15 @@ budget = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
              ,[["Thierno Diakhaby","14/03/2021"]]
               ]
 achat = [     [["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
-             ,[["Amadou Barry","14/03/2021"]]
+             ,[]
+             ,[]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
-             ,[["Moussa Deme","13/03/2021"]]
-             ,[["Daouda Kane","16/02/21"]]
-             ,[["Oumar Niang","25/09/2021"],["Daouda Kane","12/03/2021"]]
-             ,[["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]]
-             ,[["Thierno Diakhaby","14/03/2021"]]
-             ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
+             ,[]
+             ,[]
+             ,[]
+             ,[]
+             ,[]
+             ,[]
              ,[["Daouda Kane","16/02/21"]]
              ,[["Amadou Barry","14/03/2021"]]
              ,[["Oumar Niang","25/09/2021"],["Thierno Diakhaby","12/03/2021"]]
@@ -201,7 +201,10 @@ def home():
     len_budget = []
     for budg in budget:
         len_budget.append(int(len(budg)));
-    return render_template('index.html',titre='workflow',tab=data, len=len(data),gestion = gestion,lenGestion = len_gestion,budget = budget,lenBudget = len_budget)
+    len_achat = []
+    for ach in achat:
+        len_achat.append(int(len(ach)));
+    return render_template('index.html',titre='workflow',tab=data, len=len(data),gestion = gestion,lenGestion = len_gestion,budget = budget,lenBudget = len_budget,achat = achat, lenAchat = len_achat)
 
 @app.route("/test", methods=['POST','GET'])
 def test():
