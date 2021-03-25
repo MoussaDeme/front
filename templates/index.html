@@ -97,15 +97,81 @@
                                     <tr>
                                         <td colspan="5">
                                             <section class="our-blog p-0 m-0 bg-silver collapse hide"  id="exampleCollapse{{i}}">
-                                                <div id="accordion">
+                                                <div id="accordion{{ i }}">
                                                     <div class="container work-process  pb-5 pt-5">
                                                                         <div class="row">
                                                                             <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse1_{{ i }}">Gestion</button></div>
                                                                             <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse2_{{ i }}">Budget</button></div>
-                                                                            <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse3">Achat</button></div>
+                                                                            <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapse3_{{ i }}">Achat</button></div>
                                                                         </div>
+
+                                                                                 <!-- ============ step 1 =========== -->
+                                                                        <div id="collapse3_{{ i }}" class="collapse hide"  data-parent="#accordion{{ i }}">
+                                                                            <div class="pb-5"><h2>Achat</h2></div>
+                                                                        {% if lenAchat[i] > 0 %}
+
+                                                                            {% for b in range(0,lenAchat[i]) %}
+                                                                                {% if b%2==0 %}
+                                                                            <div class="row">
+                                                                                <div class="col-md-5">
+
+                                                                                    <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-5">
+                                                                                                <div class="process-step">
+                                                                                                    <p class="m-0 p-0">Valideur</p>
+                                                                                                    <h2 class="m-0 p-0">{{ b+1 }}</h2>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-7">
+                                                                                                <h5>{{  achat[i][b][0] }}</h5>
+                                                                                                <p><small>{{  achat[i][b][1] }} </small></p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="process-line-l"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-2"></div>
+                                                                                <div class="col-md-5">
+                                                                                    <div class="process-point-right"></div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- ============ step 2 =========== -->
+                                                                            {% else %}
+                                                                                <div class="row">
+
+                                                                                <div class="col-md-5">
+                                                                                    <div class="process-point-left"></div>
+                                                                                </div>
+                                                                                <div class="col-md-2"></div>
+                                                                                <div class="col-md-5">
+                                                                                    <div class="process-box process-right" data-aos="fade-left" data-aos-duration="1000">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-5">
+                                                                                                <div class="process-step">
+                                                                                                    <p class="m-0 p-0">Valideur</p>
+                                                                                                    <h2 class="m-0 p-0">{{ b+1 }}</h2>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-7">
+                                                                                                <h5>{{  achat[i][b][0] }}</h5>
+                                                                                                <p><small>{{  achat[i][b][1] }} </small></p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="process-line-r"></div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                                {% endif %}
+                                                                                {% endfor %}
+                                                                            {% endif %}
+                                                                        </div>
+
+
                                                                             <!-- ============ step 1 =========== -->
-                                                                        <div id="collapse1_{{ i }}" class="collapse hide"  data-parent="#accordion">
+                                                                        <div id="collapse1_{{ i }}" class="collapse hide"  data-parent="#accordion{{ i }}">
                                                                             <div class="pb-5"><h2>Gestion</h2></div>
                                                                             {% for b in range(0,lenGestion[i]) %}
                                                                                 {% if b%2==0 %}
@@ -166,7 +232,7 @@
                                                                         </div>
 
                                                                           <!-- ============ step 1 =========== -->
-                                                                        <div id="collapse2_{{ i }}" class="collapse hide"  data-parent="#accordion">
+                                                                        <div id="collapse2_{{ i }}" class="collapse hide"  data-parent="#accordion{{ i }}">
                                                                             <div class="pb-5"><h2>Budget</h2></div>
                                                                             {% for b in range(0,lenBudget[i]) %}
                                                                                 {% if b%2==0 %}
@@ -208,7 +274,7 @@
                                                                                         <div class="row">
                                                                                             <div class="col-md-5">
                                                                                                 <div class="process-step">
-                                                                                                    <p class="m-0 p-0">Valideur</p>
+                                                                                                    <p class="m-0 p-0">Valideur 2</p>
                                                                                                     <h2 class="m-0 p-0">{{ b+1 }}</h2>
                                                                                                 </div>
                                                                                             </div>
