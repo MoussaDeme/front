@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 
 
 
+
 app = Flask(__name__)
 
 data = [    ["1", "Bon N°1",156,"25/01/21","done"],
@@ -51,16 +52,16 @@ data = [    ["1", "Bon N°1",156,"25/01/21","done"],
             ["44", "Bon N°44", 317, "18/02/21", "done"],
             ["45", "Bon N°45", 133, "16/02/21", "hourglass_empty"]]
 gestion = [
-            [["Oumar Niang","date"],["Moussa Deme","date"]],
-            [["Moussa Deme","date"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Oumar Niang","date"],["Daouda Kane","16/02/21"]],
+            [["Oumar Niang","16/02/21"],["Moussa Deme","16/02/21"]],
+            [["Moussa Deme","16/02/21"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"],["Oumar Niang","16/02/21"],["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby","16/02/21"]],
-            [["Oumar Niang","date"],["Moussa Deme","date"]],
+            [["Oumar Niang","16/02/21"],["Moussa Deme","16/02/21"]],
             [["Thierno Diakhaby","16/02/21"]],
             [["Daouda Kane","16/02/21"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"],["Daouda Kane","16/02/21"]],
             [["Oumar Niang", "16/02/21"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
@@ -70,9 +71,9 @@ gestion = [
             [["Thierno Diakhaby", "16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Moussa Deme", "16/02/21"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"]],
             [["Moussa Deme", "16/02/21"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Moussa Deme", "16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
@@ -82,7 +83,7 @@ gestion = [
             [["Daouda Kane", "16/02/21"]],
             [["Oumar Niang", "16/02/21"]],
             [["Oumar Niang", "16/02/21"]],
-            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","date"],["Daouda Kane","16/02/21"]],
+            [["Thierno Diakhaby","16/02/21"],["Moussa Deme","16/02/21"],["Daouda Kane","16/02/21"]],
             [["Thierno Diakhaby", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
             [["Daouda Kane", "16/02/21"]],
